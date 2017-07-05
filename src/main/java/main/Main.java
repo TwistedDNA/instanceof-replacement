@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         int result = whenTypeOf("aaa")
                 .is(String.class).thenReturn(String::length)
-                .is(Integer.class).thenReturn(d -> d)
+                .is(Integer.class).thenReturn(d -> d).
         execute();
     }
 }

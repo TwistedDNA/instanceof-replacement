@@ -6,7 +6,7 @@ import main.Doable;
 import java.util.HashMap;
 import java.util.function.Function;
 
-public class TypeChecker {
+public class TypeChecker{
     private HashMap<Class, Function> map;
     private Object obj;
 
@@ -15,7 +15,7 @@ public class TypeChecker {
     }
 
     public <T> Doable<T> is(T clazz) {
-        return new Doable(clazz);
+        return new Doable(clazz, this);
     }
 
     public TypeChecker(Object object) {
