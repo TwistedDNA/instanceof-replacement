@@ -1,8 +1,13 @@
 package main;
 
+import static checker.TypeChecker.whenTypeOf;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Put some sample code here");
+        int result = whenTypeOf("aaa")
+                .is(String.class).thenReturn(String::length)
+                .is(Integer.class).thenReturn(d -> d)
+        execute();
     }
 }
